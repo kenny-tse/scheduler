@@ -13,7 +13,7 @@ export default function DayList(props) {
 
     // console.log(props)
 
-    return (<DayListItem key={x.id} name={x.name} spots={x.spots} selected={x.name === props.day} setDay={props.setDay} />);
+    return (<DayListItem key={x.id} name={x.name} spots={x.spots} selected={x.name === props.value} setDay={props.onChange} />);
   });
 
   return (
