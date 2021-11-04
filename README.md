@@ -23,16 +23,16 @@ npm run storybook
 ```
 ## Screenshots
 
-!["Screenshot description"](URL)
+![Form for signing up for an interview](https://github.com/kenny-tse/scheduler/blob/master/screenshots/Screenshot%20from%202021-11-03%2019-23-25.png?raw=true)
 
 
-!["Screenshot description"](URL)
+![Selecting interviewer with name filled out](https://github.com/kenny-tse/scheduler/blob/master/screenshots/Screenshot%20from%202021-11-03%2019-23-40.png?raw=true)
 
 
-!["Screenshot description"](URL)
+![Showing created interview when hovered, as well as deleting an interview](https://github.com/kenny-tse/scheduler/blob/master/screenshots/Screenshot%20from%202021-11-03%2019-24-23.png?raw=true)
 
 
-!["Screenshot description"](URL)
+![Interview in the process of being removed from the database](https://github.com/kenny-tse/scheduler/blob/master/screenshots/Screenshot%20from%202021-11-03%2019-24-27.png?raw=true)
 
 
-!["Screenshot description"](URL)
+![Interview removed in time slot 4pm](https://github.com/kenny-tse/scheduler/blob/master/screenshots/Screenshot%20from%202021-11-03%2019-24-29.png?raw=true)
