@@ -14,7 +14,7 @@ const getAppointmentsForDay = function (state, day) {
   }
 
   return appointmentArray;
-
+  // alternate solution from mentor
   // const found = state.days.find(d => day === d.name);
   // if (state.days.length === 0 || found === undefined) return [];
   // return found.appointments.map(id => state.appointments[id]);
@@ -22,35 +22,23 @@ const getAppointmentsForDay = function (state, day) {
 
 const getInterviewersForDay = function (state, day) {
 
-  // let appointmentInterested = [];
-  // for (let i = 0; i < state.days.length; i++) {
-  //   if (state.days[i].name === day) {
-  //     appointmentInterested = state.days[i].appointments;
-  //   }
-  // }
+  let interviewerId = [];
+  for (let i = 0; i < state.days.length; i++) {
+    if (state.days[i].name === day) {
+      interviewerId = state.days[i].interviewers;
+    }
+  }
 
-  // let interviwersArray = [];
-  // for (let i = 0; i < appointmentInterested.length; i++) {
-  //   if (state.appointments[`${appointmentInterested[i]}`].interview !== null) {
-  //     interviwersArray.push(state.appointments[`${appointmentInterested[i]}`].interview.interviewer);
-  //   }
-  // }
+  let interviewersArray = [];
+  for (let i = 0; i < interviewerId.length; i++) {
+    interviewersArray.push(state.interviewers[`${interviewerId[i]}`]);
+  }
 
-  // let interviewersToReturn = [];
-
-  // for (let i = 0; i < interviwersArray.length; i++) {
-  //   interviewersToReturn.push(state.interviewers[`${interviwersArray[i]}`])
-  // }
-
-  // return interviewersToReturn;
-
-  const found = state.days.find(d => day === d.name);
-
-  // console.log(found)
-  if (state.days.length === 0 || found === undefined) return [];
-  return found.interviewers.map(id => state.interviewers[id]);
-
-
+  return interviewersArray;
+  // alternate solution from mentor
+  // const found = state.days.find(d => day === d.name);
+  // if (state.days.length === 0 || found === undefined) return [];
+  // return found.interviewers.map(id => state.interviewers[id]);
 };
 
 const getInterview = function (state, interview) {
@@ -67,18 +55,12 @@ const getInterview = function (state, interview) {
   }
 
   return interviewToReturn;
-
   // return (
   //   interview && {
   //     ...interview,
   //     interviewer: state.interviewers[interview.interviewer]
   //   }
   // );
-
 };
 
 export { getAppointmentsForDay, getInterview, getInterviewersForDay };
-
-//why cant i export function from top
-// module.exports = { getAppointmentsForDay, getInterview };
-

@@ -20,10 +20,9 @@ const useApplicationData = function () {
   }
 
   useEffect(() => {
-    const baseUrl = "http://localhost:8001/api"
-    const days = axios.get(`${baseUrl}/days`);
-    const appointments = axios.get(`${baseUrl}/appointments`);
-    const interviewers = axios.get(`${baseUrl}/interviewers`);
+    const days = axios.get(`api/days`);
+    const appointments = axios.get(`api/appointments`);
+    const interviewers = axios.get(`api/interviewers`);
     const promises = [days, appointments, interviewers]
     Promise.all(promises)
       .then((response) => {
@@ -82,8 +81,6 @@ const useApplicationData = function () {
   return { state, setDay, bookInterview, cancelInterview };
 }
 export default useApplicationData;
-
-
 
 const calculateSpots = function (state, appointments, setState) {
   let tempState = { ...state, appointments }
