@@ -23,7 +23,7 @@ npm run storybook
 ```
 ## Screenshots
 
-![Form for signing up for an interview](https://github.com/kenny-tse/scheduler/blob/master/screenshots/Screenshot%20from%202021-11-03%2019-23-25.png?raw=true)
+!["Form for signing up for an interview"](https://github.com/kenny-tse/scheduler/blob/master/screenshots/Screenshot%20from%202021-11-03%2019-23-25.png?raw=true)
 
 
 ![Selecting interviewer with name filled out](https://github.com/kenny-tse/scheduler/blob/master/screenshots/Screenshot%20from%202021-11-03%2019-23-40.png?raw=true)
