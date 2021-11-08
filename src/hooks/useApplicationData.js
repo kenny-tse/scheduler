@@ -16,7 +16,7 @@ const useApplicationData = function () {
       ...state,
       day: newDay
     };
-    setState((prev) => { return newState })
+    setState(() => { return newState })
   }
 
   // gets days, appointments, interviewers from api server to be used to display to user
@@ -50,7 +50,7 @@ const useApplicationData = function () {
       data: {
         interview: interview
       }
-    }).then((res) => {
+    }).then(() => {
       calculateSpots(state, appointments, setState);
     })
     return promise;
