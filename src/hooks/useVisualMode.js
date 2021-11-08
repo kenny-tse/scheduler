@@ -30,7 +30,7 @@ const useVisualMode = function (initial) {
 
   const back = function () {
 
-    let historyCopyForSetMode = [];
+    let historyCopyForSetMode = []; // for setMode after setHistory is called because setMode needs access to the new value 
 
     if (history.length > 1) {
       setHistory((prev) => {

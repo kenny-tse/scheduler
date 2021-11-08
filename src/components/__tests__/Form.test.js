@@ -45,7 +45,6 @@ describe("Form", () => {
     expect(onSave).not.toHaveBeenCalled();
   });
 
-
   // xit("calls onSave function when the name is defined", () => {
   //   /* 1. Create the mock onSave function */
   //   const onSave = jest.fn()

@@ -19,6 +19,7 @@ const useApplicationData = function () {
     setState((prev) => { return newState })
   }
 
+  // gets days, appointments, interviewers from api server to be used to display to user
   useEffect(() => {
     const days = axios.get(`api/days`);
     const appointments = axios.get(`api/appointments`);
@@ -83,7 +84,7 @@ const useApplicationData = function () {
 export default useApplicationData;
 
 const calculateSpots = function (state, appointments, setState) {
-  let tempState = { ...state, appointments }
+  let tempState = { ...state, appointments } // used to not modify original state
 
   let spots = 0;
   for (const appointment of getAppointmentsForDay(tempState, state.day)) {
@@ -92,7 +93,7 @@ const calculateSpots = function (state, appointments, setState) {
     }
   }
 
-  let obj = tempState.days.find((d) => d.name === state.day)
+  let obj = tempState.days.find((d) => d.name === state.day) //used to directly modify tempState
   obj.spots = spots;
 
   setState({

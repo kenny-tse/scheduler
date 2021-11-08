@@ -34,18 +34,20 @@ export default function Appointment(props) {
         interviewer
       };
 
+      // show saving screen so user gets feedback upon submission
       transition(SAVING);
       props.bookInterview(props.id, interview)
         .then(() => transition(SHOW))
-        .catch(error => transition(ERROR_SAVE, true));
+        .catch(error => transition(ERROR_SAVE, true)); //user will need to know the save to the server was unsuccessful
     }
   }
 
   function remove() {
+    // show deleting screen so user gets feedback upon submission
     transition(DELETING, true);
     props.cancelInterview(props.id)
       .then(() => transition(EMPTY))
-      .catch(error => transition(ERROR_DELETE, true));
+      .catch(error => transition(ERROR_DELETE, true)); //user will need to know the deletion to the server was unsuccessful
   }
 
   return (

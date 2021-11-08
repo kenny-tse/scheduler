@@ -5,6 +5,7 @@ import "components/DayListItem.scss";
 export default function DayListItem(props) {
 
 
+  // lets user knows how many spots for each day
   let formatSpots = function (day) {
 
     if (props.spots === 0) {

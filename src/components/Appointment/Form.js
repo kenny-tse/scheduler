@@ -8,25 +8,29 @@ export default function Form(props) {
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   const [error, setError] = useState("");
 
+
   function validate() {
+    // user needs to put student name in (cannot be nothing)
     if (student === "") {
       setError("Student name cannot be blank");
       return;
     }
 
+    // user needs to select interviewer
     if (!interviewer) {
       setError("You need to select an interviewer!");
       return;
     }
 
+    // resets error so it doens't appear again after error is resolved
     setError("");
     props.onSave(student, interviewer);
   }
 
   const cancel = function () {
-    setStudent(() => "");
-    setInterviewer(() => "");
-    setError("");
+    setStudent(() => ""); //sets student to nothing so user sees a blank text area after cancel
+    setInterviewer(() => ""); //sets interview to unselected so user sees no instructors selected after cancel
+    setError(""); //sets error to nothing so user doesnt see error messsage after cancel
     props.onCancel();
   };
 
@@ -40,7 +44,7 @@ export default function Form(props) {
             name="name"
             type="text"
             placeholder="Enter Student Name"
-            value={student}
+            value={student} // lets the user see what they type
             data-testid="student-name-input"
           />
           <section className="appointment__validation">{error}</section>
