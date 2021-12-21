@@ -1,5 +1,8 @@
 # Interview Scheduler
 
+A single page application where students can sign up for, delete, and edit interviews. 
+Tech Stack: React, Axios, Classnames, Normalize, Storybook, PostgreSQL
+
 ## Setup
 
 Install dependencies with `npm install`.
